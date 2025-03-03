@@ -1,0 +1,32 @@
+GET / HTTP/1.0
+
+GET /WebBack/ HTTP/1.1
+Host: u68871.kubsu-dev.ru
+
+HEAD /WebBack/ex2/file.tar.gz HTTP/1.1
+Host: u68871.kubsu-dev.ru
+
+HEAD /WebBack/ex2/image.png HTTP/1.1
+Host: u68871.kubsu-dev.ru
+
+POST /WebBack/ex2/index.php HTTP/1.1
+Host: u68871.kubsu-dev.ru
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+
+comment=комментарий
+
+POST /WebBack/ex2/index.php HTTP/1.1
+Host: u68871.kubsu-dev.ru
+Content-Type: application/json
+Content-Length: 23
+Connection: keep-alive
+
+{"comment": "комментарий"}
+
+GET /WebBack/ex2/file.tar.gz HTTP/1.1
+Host: u68871.kubsu-dev.ru
+Range: bytes=0-99
+
+HEAD /WebBack/ex2/index.php HTTP/1.1
+Host: u68871.kubsu-dev.ru
