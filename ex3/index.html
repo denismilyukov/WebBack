@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href = "style.css" rel = "stylesheet" type="text/css">
+</head>
+<body>
+    <form id="feedbackForm" action="submit.cgi" method="post">
+       <input type="text" name="fio" placeholder="ФИО">
+       <input type="email" name="email" placeholder="Email">
+       <input type="tel" name="phone" placeholder="Телефон">
+       <label id="lang_lbl">Любимый язык программирования:
+            <select multiple="multiple" name = "langs">
+            <option value = 1>Pascal</option>
+            <option value = 2>C</option>
+            <option value = 3>C++</option>
+            <option value = 4>JavaScript</option>
+            <option value = 5>PHP</option>
+            <option value = 6>Python</option>
+            <option value = 7>Java</option>
+            <option value = 8>Haskel</option>
+            <option value = 9>Clojure</option>
+            <option value = 10>Prolog</option>
+            <option value = 11>Scala</option>
+            <option value = 12>Go</option>
+            </select>
+       </label>
+        <input type="date" name="date" id = "date" placeholder="Дата рождения">
+        <div id = "gend">
+            <a>Пол:</a>
+            <input type = "radio" name="gender" id="gender" value="male" checked="checked">М
+            <input type="radio" name="gender" value="female">Ж
+        </div>
+       <textarea name="message" placeholder="Биография"></textarea>
+       <br>
+       <label id="contract_lbl">
+           <input type="checkbox" id="contract" name="policy"> С контрактом ознакомлен
+       </label>
+       <br>
+       <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
