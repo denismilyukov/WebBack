@@ -116,7 +116,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	is_valid, val_answer := validate_data(formData)
 	if !is_valid {
-		fmt.Fprint(w, val_answer)
+		//fmt.Fprint(w, val_answer)
+		alert_message := fmt.Sprintf("./?error='%s'", val_answer)
+		http.Redirect(w, r, alert_message, http.StatusSeeOther)
 		return
 	}
 

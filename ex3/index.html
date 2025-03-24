@@ -40,5 +40,13 @@
        <br>
        <button type="submit">Отправить</button>
     </form>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            alert(error);
+        }
+    </script>
 </body>
 </html>
