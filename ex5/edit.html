@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обновление данных</title>
+    <link href = "style.css" rel = "stylesheet" type="text/css">
+</head>
+<body>
+    {{if .IsError}}
+        <div id="errors">
+            {{if not_empty .Errors.Fio}}<a class="error-message">{{.Errors.Fio}}</a>{{end}}
+            {{if not_empty .Errors.Email}}<a class="error-message">{{.Errors.Email}}</a>{{end}}
+            {{if not_empty .Errors.Phone}}<a class="error-message">{{.Errors.Phone}}</a>{{end}}
+            {{if not_empty .Errors.Langs}}<a class="error-message">{{.Errors.Langs}}</a>{{end}}
+            {{if not_empty .Errors.Dob}}<a class="error-message">{{.Errors.Dob}}</a>{{end}}
+            {{if not_empty .Errors.Bio}}<a class="error-message">{{.Errors.Bio}}</a>{{end}}
+            {{if not_empty .Errors.Contract}}<a class="error-message">{{.Errors.Contract}}</a>{{end}}
+        </div>
+    {{end}}
+    <form id="feedbackForm" action="edit.cgi" method="post">
+    <input type="hidden" name="id" value="{{.Data.Id}}">
+    <input type="text" name="fio" placeholder="ФИО" {{if not_empty .Errors.Fio}} class = "error-field"{{end}} value="{{.Data.Fio}}">
+    <input type="email" name="email" placeholder="Email" {{if not_empty .Errors.Email}} class = "error-field"{{end}} value="{{.Data.Email}}">
+    <input type="tel" name="phone" placeholder="Телефон" {{if not_empty .Errors.Phone}} class = "error-field"{{end}} value="{{.Data.Phone}}">
+    <label id="lang_lbl">Любимый язык программирования:
+            <select multiple="multiple" name = "langs" {{if not_empty .Errors.Langs}} class="error-field" {{end}}>
+            <option value = 1 {{if is_selected "1" .Data.Langs}} selected {{end}}>Pascal</option>
+            <option value = 2 {{if is_selected "2" .Data.Langs}} selected {{end}}>C</option>
+            <option value = 3 {{if is_selected "3" .Data.Langs}} selected {{end}}>C++</option>
+            <option value = 4 {{if is_selected "4" .Data.Langs}} selected {{end}}>JavaScript</option>
+            <option value = 5 {{if is_selected "5" .Data.Langs}} selected {{end}}>PHP</option>
+            <option value = 6 {{if is_selected "6" .Data.Langs}} selected {{end}}>Python</option>
+            <option value = 7 {{if is_selected "7" .Data.Langs}} selected {{end}}>Java</option>
+            <option value = 8 {{if is_selected "8" .Data.Langs}} selected {{end}}>Haskel</option>
+            <option value = 9 {{if is_selected "9" .Data.Langs}} selected {{end}}>Clojure</option>
+            <option value = 10 {{if is_selected "10" .Data.Langs}} selected {{end}}>Prolog</option>
+            <option value = 11 {{if is_selected "11" .Data.Langs}} selected {{end}}>Scala</option>
+            <option value = 12 {{if is_selected "12" .Data.Langs}} selected {{end}}>Go</option>
+            </select>
+    </label>
+        <input type="date" name="date" id = "date" placeholder="Дата рождения" {{if not_empty .Errors.Dob}} class = "error-field"{{end}} value="{{.Data.Dob}}">
+        <div id = "gend">
+            <a>Пол:</a>
+            <input type = "radio" name="gender" id="gender" value="male" {{if is_male .Data.Gender}} checked {{end}}>М
+            <input type="radio" name="gender" value="female" {{if is_male .Data.Gender}} {{else}} checked {{end}}>Ж
+        </div>
+    <textarea name="message" placeholder="Биография" {{if not_empty .Errors.Bio}} class = "error-field"{{end}}>{{.Data.Bio}}</textarea>
+    <br>
+    <label id="contract_lbl">
+        <input type="checkbox" id="contract" name="policy" {{if is_checked .Data.Contract}} checked {{end}}> С контрактом ознакомлен
+    </label>
+    <br>
+    <button type="submit">Изменить</button>
+    </form>
+</body>
+</html>
