@@ -1,0 +1,67 @@
+html, body{
+    width:100%;
+    }
+    
+    body{
+    font-family:"cascadia code", semibold;
+    font-size:18px;
+    color:#ffffff;
+    margin:0;
+    background-color:#2b2b2b;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    button{
+    font-family:"cascadia code", light;
+    border-radius:8px;
+    }
+    
+    button:hover{
+    color:#ffffff;
+    background-color:#1f1f1f;
+    transition:0.5s;
+    }
+
+    table{
+        margin:10px;
+        border-collapse: collapse;
+        border: 3px solid grey;
+        text-align: center;
+    }
+
+    th, td{
+        border: 3px solid grey;
+        padding: 4px;
+    }
+
+    thead th{
+        color: rgb(161, 161, 161);
+        background-color: rgb(57, 57, 57);
+    }
+
+    tbody{
+        font-size:14px;
+    }
+
+    button img{
+        width: 18px;
+        height: 18px;
+    }
+
+    .edit-button{
+        content: url("edit_black.png");
+    }
+
+    .edit-button:hover{
+        content: url("edit_white.png");
+        transition: 0.5s;
+    }
+
+    #actions form{
+        display: inline;
+    }
+
+    

@@ -1,0 +1,94 @@
+html, body{
+height:100%;
+width:100%;
+}
+
+body{
+font-family:"cascadia code", semibold;
+font-size:18px;
+color:#ffffff;
+margin:0;
+background-color:#2b2b2b;
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+form{
+padding:10px;
+margin:0 auto 5px;
+display:flex;
+flex-direction:column;
+width:30%;
+justify-content:center;
+background-color:#1f1f1f;
+border-radius:10px;
+border:white solid;
+}
+
+#errors{
+    display: flex;
+    flex-direction: column;
+}
+
+#gend{
+display:flex;
+flex-direction:row;
+justify-content:center;
+}
+
+#lang_lbl{
+display:flex;
+align-items:center;
+}
+
+select{
+flex-grow:1;
+border-radius:6px;
+}
+
+textarea {
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 160px;
+    font-family: "cascadia code", semibold;
+}
+
+#contract_lbl{
+margin:0 auto;
+}
+
+input{
+border-radius:6px;
+font-family: "cascadia code", semibold;
+}
+
+button{
+font-family:"cascadia code", light;
+border-radius:6px;
+}
+
+button:hover{
+color:#ffffff;
+background-color:#1f1f1f;
+transition:0.5s;
+}
+
+.error-field{
+    border-color: red;
+    border-width: 2px;
+}
+
+.error-message{
+    color:red;
+    margin:2px 0 8px; 
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:hover{
+    color:rgb(177, 0, 0);
+}

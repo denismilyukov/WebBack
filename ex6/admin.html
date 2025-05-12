@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Страница админа</title>
+        <link href="admin.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <p>Список пользователей</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">ФИО</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Телефон</th>
+                    <th scope="col">Любимые ЯП</th>
+                    <th scope="col">Дата рождения</th>
+                    <th scope="col">Пол</th>
+                    <th scope="col">Биография</th>
+                    <th scope="col">Контракт</th>
+                    <th scope="col">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Users}}
+                <tr>
+                    <th scope="row">{{.Id}}</th>
+                    <td>{{.Fio}}</td>
+                    <td>{{.Email}}</td>
+                    <td>{{.Phone}}</td>
+                    <td>{{range .Langs}}{{.}} {{end}}</td>
+                    <td>{{.Dob}}</td>
+                    <td>{{.Gender}}</td>
+                    <td>{{.Bio}}</td>
+                    <td>{{.Contract}}</td>
+                    <td id="actions">
+                        <form action="delete.cgi" method="post">
+                            <input type="hidden" name="user_id" value="{{.Id}}">
+                            <button type="submit"><img src="delete.png"></button>
+                        </form>
+                        <form action="edit.cgi" method="post">
+                            <input type="hidden" name="user_id" value="{{.Id}}">
+                            <button type="submit"><img class="edit-button"></button>
+                        </form>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+        
+        <p>Статистика по языкам программирования</p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Язык</th>
+                    <th scope="col">Количество любителей</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Langs}}
+                <tr>
+                    <td>{{.Lang}}</td>
+                    <td>{{.Num}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </body>
+</html>
