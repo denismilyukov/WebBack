@@ -263,12 +263,12 @@ func check_JWT_token(r *http.Request, w http.ResponseWriter) (bool, string) {
 
 func save_JWT_token(token string, w http.ResponseWriter) {
 	http.SetCookie(w, &http.Cookie{
-		Name:    "jwt_token",
-		Value:   token,
-		Expires: time.Now().Add(24 * time.Hour),
-		// HttpOnly: true,
-		// SameSite: http.SameSiteStrictMode,
-		// Secure:   false,
+		Name:     "jwt_token",
+		Value:    token,
+		Expires:  time.Now().Add(24 * time.Hour),
+		HttpOnly: true,
+		SameSite: http.SameSiteStrictMode,
+		Secure:   true,
 		// Path:     "/",
 	})
 }
