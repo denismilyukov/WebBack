@@ -252,6 +252,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	req := fmt.Sprintf("INSERT INTO users (fio, gender, phone, mail, date, bio, contract) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', %d);", formData.Fio,
 		formData.Gender, formData.Phone, formData.Email, formData.Dob, formData.Bio, flag)
 	output, err := send_sql_request(req)
+	if err != nil {
+		fmt.Fprintln(w, "Ошибка при выполнении sql-запроса при записи данных. Возможно вы ввели недопустимые символы в биографии")
+		fmt.Fprintln(w, formData)
+		return
+	}
 
 	req = "SELECT MAX(id) FROM users;"
 	output, err = send_sql_request(req)
@@ -270,6 +275,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	_, err = send_sql_request(req)
 	if err != nil {
 		fmt.Fprint(w, "Ошибка выполнения sql-запроса при записи чувствительных данных")
+		return
 	}
 
 	fmt.Fprint(w, formData.Fio+" , ваши данные успешно сохранены\n")
