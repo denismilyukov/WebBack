@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Обновление данных</title>
+        <link href = "css/edit.css" rel = "stylesheet" type="text/css">
+    </head>
+    <body>
+        <form id="feedbackForm" action="edit.cgi" method="post">
+            <input type="hidden" name="id" value="{{.Data.Id}}">
+            <input type="text" name="fio" placeholder="ФИО" {{if not_empty .Errors.Fio}} class = "error-field"{{end}} value="{{.Data.Fio}}">
+            <input type="email" name="email" placeholder="Email" {{if not_empty .Errors.Email}} class = "error-field"{{end}} value="{{.Data.Email}}">
+            <input type="text" name="phone" placeholder="Телефон" {{if not_empty .Errors.Phone}} class = "error-field"{{end}} value="{{.Data.Phone}}">
+            <input type="text" name="org" placeholder="Организация" value="{{.Data.Org}}">
+            <textarea name="message" placeholder="Биография" {{if not_empty .Errors.Bio}} class = "error-field"{{end}}>{{.Data.Bio}}</textarea>
+            <br>
+            <label id="contract_lbl">
+                <input type="checkbox" id="contract" name="policy" {{if is_checked .Data.Contract}} checked {{end}}> С контрактом ознакомлен
+            </label>
+            <br>
+            <button type="submit">Изменить</button>
+        </form>
+        <a href="auth.cgi?action=logout">Выйти из профиля</a>
+        <a href="index.html">Вернуться на главную</a>
+    </body>
+</html>

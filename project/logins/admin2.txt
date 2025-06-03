@@ -1,0 +1,2 @@
+login: admin2
+pass: 2306

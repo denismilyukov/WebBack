@@ -1,0 +1,70 @@
+html, body{
+    height:100%;
+    width:100%;
+}
+
+body{
+    font-family:"bahnschrift";
+    font-weight: bold;
+    font-size:18px;
+    color:#b2ff66;
+    margin:0;
+    background-color:#003319;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin:0 auto 15px;
+}
+
+a{
+    text-decoration: none;
+    color:#b2ff66;
+}
+
+a:hover{
+    color:#86c24b;
+}
+
+form{
+    padding:6px;
+    margin:0 auto 5px;
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    justify-content:center;
+    background-color: #078443;
+    border-radius:12px;
+    border:#b2ff66 2px solid;
+}
+
+input{
+    margin: 2px 0;
+    border-radius: 6px;
+    border: #b2ff66 solid 2px;
+    flex-grow: 1;
+    background-color: #003319;
+    color: #b2ff66;
+}
+
+.field{
+    display: flex;
+}
+
+button{
+    color:#b2ff66;
+    background-color: #0eb961;
+    font-family:"cascadia code", light;
+    border-radius:6px;
+    border: #b2ff66 solid 2px;
+}
+
+button:hover{
+    color:#0eb961;
+    background-color:#b2ff66;
+    transition:0.5s;
+}
+    

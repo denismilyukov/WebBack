@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name = "viewport" content="width=device-width">
+        <title>Главная страница</title>
+        <link href = "css/succ.css" rel = "stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+            <p>Поздравляем, {{.Fio}}, вы успешно зарегистрированы!</p>
+            <a>Внимание! Запомните и не разглашайте ваши персональные данные!</a>
+            <a>Логин: {{.Login}}</a>
+            <a>Пароль: {{.Password}}</a>
+        </div>
+        <a href="index.html" id="link">Вернуться на главную страницу</a>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name = "viewport" content="width=device-width">
+    <title>Главная страница</title>
+    <link href = "example.css" rel = "stylesheet" type="text/css">
+
+</head>
+<body>
+    <button id="openModal">Открыть форму</button>
+       <div id="feedbackModal" style="display:none;">
+           <form id="feedbackForm">
+               <input type="text" name="fullName" placeholder="ФИО" required>
+               <input type="email" name="email" placeholder="Email" required>
+               <input type="tel" name="phone" placeholder="Телефон" required>
+               <input type="text" name="organization" placeholder="Организация" required>
+               <textarea name="message" placeholder="Сообщение" required></textarea>
+               <label>
+                   <input type="checkbox" name="policy" required> Согласен с политикой обработки персональных данных
+               </label>
+               <button type="submit">Отправить</button>
+           </form>
+       </div>
+<script src = "example.js"></script>
+</body>
+</html>

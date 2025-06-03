@@ -1,0 +1,104 @@
+html, body{
+height:100%;
+width:100%;
+}
+
+body{
+    font-family:"bahnschrift";
+    font-weight: bold;
+    font-size:18px;
+    color:#b2ff66;
+    margin:0;
+    background-color:#003319;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+padding:10px;
+margin:0 auto 5px;
+display:flex;
+flex-direction:column;
+width:30%;
+justify-content:center;
+background-color:#078443;
+border-radius:10px;
+border:#b2ff66;
+}
+
+#errors{
+    display: flex;
+    flex-direction: column;
+}
+
+#gend{
+display:flex;
+flex-direction:row;
+justify-content:center;
+}
+
+#lang_lbl{
+display:flex;
+align-items:center;
+}
+
+select{
+flex-grow:1;
+border-radius:6px;
+}
+
+textarea {
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 160px;
+    font-family: "cascadia code", semibold;
+}
+
+#contract_lbl{
+margin:0 auto;
+}
+
+input{
+    margin: 2px 0;
+    border-radius: 6px;
+    border: #b2ff66 solid 2px;
+    flex-grow: 1;
+    background-color: #003319;
+    color: #b2ff66;
+}
+
+button{
+    color:#b2ff66;
+    background-color: #0eb961;
+    font-family:"bahnschrift";
+    font-weight: bold;
+    border-radius:6px;
+    border: #b2ff66 solid 2px;
+}
+
+button:hover{
+    color:#0eb961;
+    background-color:#b2ff66;
+    transition:0.5s;
+}
+
+.error-field{
+    border-color: red;
+    border-width: 2px;
+}
+
+.error-message{
+    color:red;
+    margin:2px 0 8px; 
+}
+
+a{
+    text-decoration: none;
+    color:#b2ff66;
+}
+
+a:hover{
+    color:#86c24b;
+}

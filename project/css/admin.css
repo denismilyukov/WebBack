@@ -1,0 +1,93 @@
+html, body{
+    height:100%;
+    width:100%;
+}
+
+#zomboss{
+    width:150px;
+    height: 150px;
+}
+
+body{
+    font-family:"bahnschrift";
+    font-size:18px;
+    font-weight: bold;
+    color:#b2ff66;
+    margin:0;
+    background-color:#003319;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin:0 auto 15px;
+}
+
+a{
+    text-decoration: none;
+    color:#b2ff66;
+}
+
+a:hover{
+    color:#86c24b;
+}
+
+button{
+    color:#b2ff66;
+    background-color: #0eb961;
+    font-family:"cascadia code", light;
+    border-radius:6px;
+    border: #b2ff66 solid 2px;
+}
+
+button:hover{
+    color:#0eb961;
+    background-color:#b2ff66;
+    transition:0.5s;
+}
+
+table{
+    margin:10px;
+    border-collapse: collapse;
+    border: 3px solid #b2ff66;
+    text-align: center;
+}
+
+th, td{
+    border: 3px solid #b2ff66;
+    padding: 4px;
+    background-color: #096d39;
+}
+
+thead th{
+    color: #c9ff92;
+    background-color: #0e944f;
+}
+
+tbody{
+    font-size:14px;
+}
+
+button img{
+    width: 18px;
+    height: 18px;
+}
+
+#actions form{
+    display: inline;
+}
+
+#menu{
+    width:100%;
+    margin:0 0 10px 10px;
+    position: relative;
+}
+
+.right{
+    position:absolute;
+    right: 20px;
+}
+
+    

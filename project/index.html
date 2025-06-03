@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name = "viewport" content="width=device-width">
+    <title>Главная страница</title>
+    <link href = "css/style.css" rel = "stylesheet" type="text/css">
+
+</head>
+<body>
+<div id = "header-nav">
+    <header>
+        <img src = "images/peashooter.jpg"/>
+        <h1>Главный сайт</h1>
+    </header>
+    <nav>
+        <a id = "usefullinks" href = "auth.cgi">Вход</a>
+        <a id = "item1" href = "#openModal">Форма</a>
+        <a id = "item2" href = "https://ru.wikipedia.org/wiki/CSS">CSS?</a>
+    </nav>
+</div>
+<div id = "content">
+    <ul>
+        <li><a href = "http://kubsu.ru/">КубГУ</a></li>
+        <li><a href = "https://kubsu.ru/" title = "(Протокол https)">КубГУ</a></li>
+        <li><a href = "https://dodopizza.ru/krasnodar/stavropolskaya218">
+            <img src = "images/dodo-logo.png"
+                 alt = "dodo">
+            </a>
+        </li>
+        <li><a href = "/ex3/level1/level2/in.html" title = "Сокращенная ссылка">Внутренний сайт</a></li>
+        <li><a href = "/ex3/level1/level2/index.html" title = "Сокращенная ссылка">Главная</a></li>
+        <li><a href = "#malevich" title = "Картина Малевича">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href = "in.html?par1=val1&par2=val2&par3=val3">Ссылка с 3 параметрами</a></li>
+        <li><a href = "in.html?id = 13">Ссылка с параметром id</a></li>
+        <li><a href = "in.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href = "../../about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href = "../lvl1.html">Относительная ссылка на страницу в каталоге уровнем выше</a></li>
+        <li><a href = "../../lvl0.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+        <li><p>
+            <a href = "https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B1%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82"
+               >Кубанский государственный университет</a>
+            - одно из ведущих высших учебных заведений, расположенное в Краснодаре.<br>
+            Является одним из крупнейших и старейших университетов юга России.
+            </p></li>
+        <li><a href="https://www.kubsu.ru/index.php#zone-content" title = "Сайт КубГУ">Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <map name = "circnrect">
+                <area shape = "circle" coords = "77,69,36" href = "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3" alt = "circle">
+                <area shape = "rect" coords="76,139,195,323" href = "https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82" alt = "rect">
+            </map>
+        <li>
+            <img usemap="#circnrect" src = "images/malevich.jpg" alt = "malevich" id = "malevich" title = "Ссылки из прямоугольных и круглых областей картинки">
+        </li>
+        <li><a href = "" title = "Обновить страницу">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href = "./in.html" rel = "nofollow">Ссылка, по которой запрещен переход поисковиками</a></li>
+        <li>
+            <noindex>
+                <a href = "../lvl1.html">Ссылка, по которой запрещена индексация поисковиками</a>
+            </noindex>
+        </li>
+        <li>
+            <ol id = "list">
+                <li><a href = "https://www.kubsu.ru/ru/fktipm" title = "Самый серьезный факультет">Сайт ФКТиПМ</a></li>
+                <li><a href = "https://www.desmos.com/calculator?lang=ru" title = "Графический калькулятор">Desmos</a></li>
+                <li><a href = "https://moodle.kubsu.ru/course/view.php?id=780" title = "Разработка пользовательского Web-интерфейса"
+                >Курс в Moodle</a></li>
+            </ol>
+        </li>
+        <li><a href = "ftp://PavelA:qwerty123@tavalik.ru/Temp/file.txt">Ссылка на файл на сервере ftp с авторизацией</a></li>
+    </ul>
+    <div id = "tab-calc">
+        <div class = "tabhed">
+            <p>Таблица о зомби</p>
+            <table>
+                <tr>
+                    <td>Вид зомби</td>
+                    <td>Здоровье</td>
+                    <td>Урон</td>
+                    <td>Скорость</td>
+                </tr>
+                <tr>
+                    <td>Обычный зомби</td>
+                    <td rowspan="2">181</td>
+                    <td rowspan="5">100</td>
+                    <td>4.7</td>
+                </tr>
+                <tr>
+                    <td>Зомби с флагом</td>
+                    <td>3.7</td>
+                </tr>
+                <tr>
+                    <td>Зомби с конусом</td>
+                    <td>551</td>
+                    <td rowspan = "3">4.7</td>
+                </tr>
+                <tr>
+                    <td>Зомби-атлет</td>
+                    <td>335</td>
+                </tr>
+                <tr>
+                    <td>Зомби с ведром</td>
+                    <td>1281</td>
+                </tr>
+            </table>
+        </div>
+        <div class = "calculator">
+            <p>Калькулятор стоимости товара</p>
+            <label for = "quantity">Количество товара:</label>
+            <input type = "number" id = "quantity" min = "1" value = "1">
+            <div id = "radioBtns">
+                <label>Тип товара:</label>
+                <label><input type = "radio" name = "serviceType" value = "1" checked>Древофакел</label>
+                <label><input type = "radio" name = "serviceType" value = "2">Горохострел</label>
+                <label><input type = "radio" name = "serviceType" value = "3">Подсолнушек</label>
+            </div>
+            <div id = "optionSelect" class = "hidden">
+                <label for = "product">Вид горохострела:</label>
+                <select id = "product">
+                    <option value = "0">Обычный</option>
+                    <option value = "75">Ледяной</option>
+                    <option value = "100">Скорострел</option>
+                </select>
+            </div>
+            <div id = "propertyCheckbox" class = "hidden">
+                <label><input id = "property" type = "checkbox">Двойной?</label>
+            </div>
+            <p>Итоговая стоимость: <span id = "totalPrice">0</span> солнышек</p>
+        </div>
+    </div>
+    <div id = "gallery-container">
+        <button class = "arrow arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+        <div id = "gallery">
+            <img src = "images/zombie-fisher.png" alt = "ZombieFisher">
+            <img src = "images/FirePea.jpg" alt = "FirePea">
+            <img src = "images/Newspaper_Zombie.jpg" alt = "NewspaperZombie">
+            <img src = "images/PrimalWallnut.jpg" alt = "PrimallWallnut">
+            <img src = "images/hypnodenc.jpg" alt = "hypnodenc">
+            <img src = "images/Snow_Pea_29.jpg" alt = "SnowPea">
+            <img src = "images/Cactus.jpg" alt = "Cactus">
+            <img src = "images/113.png" alt = "Karasik">
+        </div>
+        <button class = "arrow arrow-right" onclick = "moveSlide(1)">&#10095;</button>
+    </div>
+    <div id = "pager"></div>
+
+    <button id="openModal">Зарегистрироваться</button>
+       <div id="feedbackModal" style="display:none;">
+           <form id="feedbackForm" action="submit.cgi" method="post">
+               <input type="text" name="fio" placeholder="ФИО" required pattern="[A-Za-zА-Яа-яЁё]*\s[A-Za-zА-Яа-яЁё]*\s[A-Za-zА-Яа-яЁё]*">
+               <input type="email" name="email" placeholder="Email" required>
+               <input type="tel" name="phone" placeholder="Телефон" required pattern="+7(\d[0-9]{3})\d[0-9]{7}">
+               <input type="text" name="org" placeholder="Организация" required>
+               <textarea name="message" placeholder="Сообщение" required></textarea>
+               <br>
+               <label>
+                   <input type="checkbox" name="policy" required> Согласен с политикой обработки персональных данных
+               </label>
+               <br>
+               <button type="submit">Отправить</button>
+           </form>
+       </div>
+</div>
+
+<footer>
+    <img src="images/CrazyDave.jpg" width="60" height="72">
+    <h2 id = "me">by denis milyukov</h2>
+</footer>
+
+<script src = "js/script.js"></script>
+<script src = "js/form.js"></script>
+</body>
+</html>
